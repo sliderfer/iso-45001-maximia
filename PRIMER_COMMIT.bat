@@ -9,7 +9,7 @@ git init
 git branch -m main
 git config user.name "Fernando Vidal"
 git config user.email "licvidalfernando@gmail.com"
-git remote add origin https://github.com/sliderfer/ISO-45001.git
+git remote add origin https://sliderfer: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@github.com/sliderfer/ISO-45001.git
 
 git add CLAUDE.md
 git add .gitignore
@@ -25,15 +25,9 @@ git add "fr de maximia no se pueden modificar/"
 
 git commit -m "[init] Primer commit - SG-SST Maximia ISO 45001"
 
-echo.
-echo ================================================
-echo  Ahora vas a subir al repo de GitHub.
-echo  Te va a pedir tu usuario y token de GitHub.
-echo ================================================
-echo.
-
 git push -u origin main
 
 echo.
-echo  LISTO! El repo esta en: https://github.com/sliderfer/ISO-45001
+echo  LISTO! Repo en: https://github.com/sliderfer/ISO-45001
+echo  IMPORTANTE: Borra este archivo y revoca el token en GitHub Settings.
 pause
