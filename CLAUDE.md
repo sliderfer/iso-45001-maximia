@@ -282,6 +282,6 @@ Todos creados y guardados en la carpeta raíz del sistema. Lista Maestra v03 inc
 
 ## Contexto Git
 
-- **Repo:** https://github.com/sliderfer/ISO-45001
+- **Repo:** https://github.com/sliderfer/iso-45001-maximia
 - **Rama principal:** `main`
 - **Convención de commits:** `[tipo] descripción breve` — Ej: `[nuevo] PR-19 Gestión de EPP`, `[actualiza] Lista Maestra v3`, `[fix] corrección typo PR-04`
