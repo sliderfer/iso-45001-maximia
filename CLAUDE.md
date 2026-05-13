@@ -178,12 +178,81 @@ Algunos archivos `.docx` del sistema usan una variante de ZIP no estándar (con 
 
 ---
 
+## Formularios del Sistema (FR)
+
+### Convención de codificación de FRs
+
+**Formato confirmado:** `FR [número]-[versión]`
+- **Número:** correlativo general de Maximia (NO atado al número del PR). Ej: FR 25, FR 85, FR 109.
+- **Versión:** número de revisión del formulario, empieza en 01. Ej: FR-25-07 = FR número 25, versión 7.
+- El número más alto conocido en la carpeta local es **FR-109**. Los FRs nuevos del SG-SST deben continuar desde **FR-110** en adelante (verificar contra el registro completo de Maximia antes de asignar).
+
+### Carpeta intocable
+`fr de maximia no se pueden modificar/` — NUNCA editar, renombrar ni eliminar archivos de esta carpeta.
+
+### FRs existentes con código en el nombre (oficiales Maximia)
+
+| Código | Archivo | Descripción |
+|--------|---------|-------------|
+| FR-25-07 | `FR 25-07 Asistencia a Capacitación.docx` | Planilla de asistencia a capacitación |
+| FR-27-05 | `FR 27-05 Plan Anual de Capacitaciones.xlsx` | Plan anual de capacitaciones |
+| FR-85-02 | `FR 85-02 Plan de Acción.xlsx` | Plan de acción |
+| FR-107-01 | `FR 107-01 Control de Higiene y Seguridad 2026 (2) (2).xlsx` | Control de Higiene y Seguridad – Lista de Chequeo HyS |
+| FR-109-01 | `FR 109-01 Informe Técnico de Investigación de Accidentes e Incidentes (1) (3).xlsx` | Informe Técnico de Investigación de Accidentes e Incidentes |
+
+### Mapeo de archivos sin código FR
+
+Archivos en la carpeta intocable que no tienen código en el nombre. Los códigos asignados son **tentativos** — verificar que el número no esté ocupado en el registro de Maximia antes de oficializar.
+
+| Archivo real | Código tentativo | Descripción | PR que lo referencia |
+|---|---|---|---|
+| `AST Atención al público (6).xlsx` | FR-110-01 | ART/AST – Gastronomía/Atención público | PR-04, PR-08 |
+| `AST MANTENIMIENTO (1).xlsx` | FR-110-01 | ART/AST – Mantenimiento | PR-04, PR-08 |
+| `AST Maximia (maestranza-mucama) (1).xlsx` | FR-110-01 | ART/AST – Maestranza y mucama | PR-04, PR-08 |
+| `AST Maximia sa bodegueros (4) (1).xlsx` | FR-110-01 | ART/AST – Bodegueros | PR-04, PR-08 |
+| `AST Maximia sa gastronomia (7) (2).xlsx` | FR-110-01 | ART/AST – Gastronomía | PR-04, PR-08 |
+| `Anexo Mucama MATRIZ DE RIEGO (1) (4).xlsx` | FR-111-01 | Matriz IPER – Mucama | PR-04 |
+| `Anexo Plantilla Gastronomía O y L-Bodegueros (1).xlsx` | FR-111-01 | Matriz IPER – Gastronomía y Bodegueros | PR-04 |
+| `Anexo Preparación de cocina alimentos (1).xlsx` | FR-111-01 | Matriz IPER – Preparación de cocina | PR-04 |
+| `Anexo uso freidora y electrodomésticos.xlsx` | FR-111-01 | Matriz IPER – Freidora y electrodomésticos | PR-04 |
+| `Anexo Servicio mantenimiento.xlsx` | FR-111-01 | Matriz IPER – Mantenimiento | PR-04 |
+| `FR - Estadísticas de Siniestralidad por Operación.xlsx` | FR-112-01 | Indicadores SST – Tablero de siniestralidad | PR-06, PR-12 |
+| `2026 - SINIESTRALIDAD Maximia por Operación (2).xlsx` | FR-112-01 | Indicadores SST – Siniestralidad 2026 | PR-06, PR-12 |
+
+### Archivos duplicados detectados (no eliminar — son intocables)
+- `Anexo Mucama MATRIZ DE RIEGO (1) (4).xlsx` y `(5).xlsx` → mismo contenido
+- `Anexo Preparación de cocina alimentos (1).xlsx` y `(2).xlsx` → mismo contenido
+- `FR 25-07 Asistencia a Capacitación.docx` y `FR-25-07 Asistencia a Capacitación.docx` → mismo FR, naming diferente
+
+### FRs pendientes de crear (referenciados en PRs pero sin archivo)
+
+Códigos tentativos continuando desde FR-113. Verificar contra registro de Maximia antes de oficializar.
+
+| Código tentativo | Nombre | PR que lo referencia |
+|--------|--------|----------------------|
+| FR-113-01 | Indicadores SST (tablero mensual) | PR-06, 08, 12, 14, 15 |
+| FR-114-01 | Registro de No Conformidades | PR-15, PR-18 |
+| FR-116-01 | Matriz de Requisitos Legales | PR-05, 12, 14, 16 |
+| FR-117-01 | Registro de Entrega de EPP | PR-10 |
+| FR-118-01 | Actas de Revisión por la Dirección | PR-12, 14 |
+| FR-119-01 | Inventario de Sustancias Químicas | PR-10 |
+| FR-120-01 | Registro de Ingreso de Contratistas | PR-10, 17 |
+| FR-121-01 | Registro de Simulacro de Emergencia | PR-11 |
+| FR-122-01 | Informe de Auditoría Interna SST | PR-13, 14 |
+| FR-123-01 | Formulario de Gestión del Cambio | PR-09, 16 |
+| FR-124-01 | Permiso de Trabajo para tareas de riesgo | PR-17 |
+| FR-125-01 | Listado de Contratistas Habilitados | PR-17 |
+
+---
+
 ## Memorias de Trabajo
 
 > Esta sección se actualiza a medida que trabajamos. Aquí guardamos aprendizajes, aclaraciones y decisiones tomadas durante el proyecto.
 
 ### Decisiones tomadas
 - PR-15 fue corregido el 12/05/2026: le faltaban las secciones OBJETIVO, ALCANCE y DESARROLLO al inicio. Se agregaron con contenido acorde al procedimiento.
+- 12/05/2026: Confirmado sistema de codificación de FRs. Formato: `FR [número]-[versión]`. El número es correlativo general de Maximia (NO atado al PR). La versión empieza en 01. Nuevo: continuar desde FR-110 (verificar contra registro completo de Maximia).
+- 13/05/2026: FR-115-01 (Formulario de Investigación de Incidentes) eliminado — ya existe FR-109-01 de Maximia que cubre ese propósito. FR-107-01 es lista de chequeo HyS. Nombres completos confirmados por Fernando.
 
 ### Aclaraciones del cliente
 - (vacío — se irá completando)
@@ -191,8 +260,9 @@ Algunos archivos `.docx` del sistema usan una variante de ZIP no estándar (con 
 ### Formas de trabajo aprendidas
 - Todos los PR deben tener OBJETIVO, ALCANCE, DESARROLLO, REGISTROS Y ARCHIVO, LISTA DE DISTRIBUCIÓN, REVISIONES, CONTROL Y APROBACIÓN — en ese orden.
 - El nombre del PR-04 tiene "(2)" de más. Pendiente renombrar cuando corresponda.
-- La carpeta `fr de maximia no se pueden modificar/` existe pero está vacía — los formularios propios aún no fueron cargados.
+- La carpeta `fr de maximia no se pueden modificar/` contiene los FRs oficiales de Maximia — no se pueden modificar.
 - Los templates viven en `template/` — usar siempre como punto de partida.
+- Los archivos AST y Anexo IPER no tienen código FR en el nombre pero están mapeados en la sección "Formularios del Sistema".
 
 ### Aspectos específicos de Maximia
 - El sistema está siendo construido desde cero / en proceso de implementación.
