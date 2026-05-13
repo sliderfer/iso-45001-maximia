@@ -224,24 +224,26 @@ Archivos en la carpeta intocable que no tienen código en el nombre. Los código
 - `Anexo Preparación de cocina alimentos (1).xlsx` y `(2).xlsx` → mismo contenido
 - `FR 25-07 Asistencia a Capacitación.docx` y `FR-25-07 Asistencia a Capacitación.docx` → mismo FR, naming diferente
 
-### FRs pendientes de crear (referenciados en PRs pero sin archivo)
+### FRs SST creados (sesión 13/05/2026)
 
-Códigos tentativos continuando desde FR-113. Verificar contra registro de Maximia antes de oficializar.
+Todos creados y guardados en la carpeta raíz del sistema. Lista Maestra v03 incluye todos.
 
-| Código tentativo | Nombre | PR que lo referencia |
-|--------|--------|----------------------|
-| FR-113-01 | Indicadores SST (tablero mensual) | PR-06, 08, 12, 14, 15 |
-| FR-114-01 | Registro de No Conformidades | PR-15, PR-18 |
-| FR-116-01 | Matriz de Requisitos Legales | PR-05, 12, 14, 16 |
-| FR-117-01 | Registro de Entrega de EPP | PR-10 |
-| FR-118-01 | Actas de Revisión por la Dirección | PR-12, 14 |
-| FR-119-01 | Inventario de Sustancias Químicas | PR-10 |
-| FR-120-01 | Registro de Ingreso de Contratistas | PR-10, 17 |
-| FR-121-01 | Registro de Simulacro de Emergencia | PR-11 |
-| FR-122-01 | Informe de Auditoría Interna SST | PR-13, 14 |
-| FR-123-01 | Formulario de Gestión del Cambio | PR-09, 16 |
-| FR-124-01 | Permiso de Trabajo para tareas de riesgo | PR-17 |
-| FR-125-01 | Listado de Contratistas Habilitados | PR-17 |
+| Código | Archivo | Tipo | PR que lo referencia |
+|--------|---------|------|----------------------|
+| FR-113-01 | `FR-113-01 Indicadores SST.xlsx` | Excel | PR-06, 08, 12, 14, 15 |
+| FR-114-01 | `FR-114-01 Registro de No Conformidades.xlsx` | Excel | PR-15, PR-18 |
+| FR-116-01 | `FR-116-01 Matriz de Requisitos Legales.xlsx` | Excel | PR-05, 12, 14, 16 |
+| FR-117-01 | `FR-117-01 Registro de Entrega de EPP.xlsx` | Excel | PR-10 |
+| FR-118-01 | `FR-118-01 Acta de Revision por la Direccion.docx` | Word | PR-12, 14 |
+| FR-119-01 | `FR-119-01 Inventario de Sustancias Quimicas.xlsx` | Excel | PR-10 |
+| FR-120-01 | `FR-120-01 Registro de Ingreso de Contratistas.xlsx` | Excel | PR-10, 17 |
+| FR-121-01 | `FR-121-01 Registro de Simulacro de Emergencia.docx` | Word | PR-11 |
+| FR-122-01 | `FR-122-01 Informe de Auditoria Interna SST.docx` | Word | PR-13, 14 |
+| FR-123-01 | `FR-123-01 Formulario de Gestion del Cambio SST.docx` | Word | PR-09, 16 |
+| FR-124-01 | `FR-124-01 Permiso de Trabajo para Tareas de Riesgo.docx` | Word | PR-17 |
+| FR-125-01 | `FR-125-01 Listado de Contratistas Habilitados.xlsx` | Excel | PR-17 |
+
+> FR-115-01 fue eliminado — su función ya la cubre FR-109-01 (oficial Maximia).
 
 ---
 
@@ -250,19 +252,25 @@ Códigos tentativos continuando desde FR-113. Verificar contra registro de Maxim
 > Esta sección se actualiza a medida que trabajamos. Aquí guardamos aprendizajes, aclaraciones y decisiones tomadas durante el proyecto.
 
 ### Decisiones tomadas
-- PR-15 fue corregido el 12/05/2026: le faltaban las secciones OBJETIVO, ALCANCE y DESARROLLO al inicio. Se agregaron con contenido acorde al procedimiento.
+- 12/05/2026: PR-15 corregido — le faltaban OBJETIVO, ALCANCE y DESARROLLO al inicio.
 - 12/05/2026: Confirmado sistema de codificación de FRs. Formato: `FR [número]-[versión]`. El número es correlativo general de Maximia (NO atado al PR). La versión empieza en 01. Nuevo: continuar desde FR-110 (verificar contra registro completo de Maximia).
-- 13/05/2026: FR-115-01 (Formulario de Investigación de Incidentes) eliminado — ya existe FR-109-01 de Maximia que cubre ese propósito. FR-107-01 es lista de chequeo HyS. Nombres completos confirmados por Fernando.
+- 13/05/2026: FR-115-01 eliminado — ya existe FR-109-01 de Maximia que cubre investigación de incidentes.
+- 13/05/2026: FR-107-01 es lista de chequeo HyS. Nombres completos confirmados por Fernando.
+- 13/05/2026: FRs 113 a 125 (sin 115) creados y guardados. Lista Maestra actualizada a v03.
+- 13/05/2026: PR-04, PR-06, PR-07 — nombres de archivo corregidos (PR-04 tenía "(2)"; PR-06 y PR-07 tenían doble punto).
+- 13/05/2026: Headers de PR-06 y PR-07 corregidos — el campo código en el encabezado estaba vacío ("PR" sin número). Ahora dice "PR-06" y "PR-07" respectivamente.
+- 13/05/2026: Commit `[nuevo] FRs 113-125 creados; Lista Maestra v03; FR-115 eliminado; headers PR-06/07 corregidos` pusheado a main.
 
 ### Aclaraciones del cliente
 - (vacío — se irá completando)
 
 ### Formas de trabajo aprendidas
 - Todos los PR deben tener OBJETIVO, ALCANCE, DESARROLLO, REGISTROS Y ARCHIVO, LISTA DE DISTRIBUCIÓN, REVISIONES, CONTROL Y APROBACIÓN — en ese orden.
-- El nombre del PR-04 tiene "(2)" de más. Pendiente renombrar cuando corresponda.
 - La carpeta `fr de maximia no se pueden modificar/` contiene los FRs oficiales de Maximia — no se pueden modificar.
 - Los templates viven en `template/` — usar siempre como punto de partida.
 - Los archivos AST y Anexo IPER no tienen código FR en el nombre pero están mapeados en la sección "Formularios del Sistema".
+- Los archivos .docx del sistema usan ZIP no estándar con entradas `[trash]` — Python `zipfile` y `openpyxl` no los pueden abrir. Usar lectura manual con `struct` + `zlib`. Ver patrón `read_zip` / `write_zip` en el historial de sesiones.
+- Para crear Word nuevos usar `python-docx`. Para Excel usar `openpyxl` + `scripts/recalc.py` para recalcular fórmulas.
 
 ### Aspectos específicos de Maximia
 - El sistema está siendo construido desde cero / en proceso de implementación.
