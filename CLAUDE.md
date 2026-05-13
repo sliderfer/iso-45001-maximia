@@ -252,6 +252,7 @@ Todos creados y guardados en la carpeta raíz del sistema. Lista Maestra v03 inc
 > Esta sección se actualiza a medida que trabajamos. Aquí guardamos aprendizajes, aclaraciones y decisiones tomadas durante el proyecto.
 
 ### Decisiones tomadas
+- 13/05/2026: FRs SST movidos a carpeta `FR - Formularios SST/`. `Modelo PR.docx` movido de `1. Política y Dirección/` a `template/`.
 - 12/05/2026: PR-15 corregido — le faltaban OBJETIVO, ALCANCE y DESARROLLO al inicio.
 - 12/05/2026: Confirmado sistema de codificación de FRs. Formato: `FR [número]-[versión]`. El número es correlativo general de Maximia (NO atado al PR). La versión empieza en 01. Nuevo: continuar desde FR-110 (verificar contra registro completo de Maximia).
 - 13/05/2026: FR-115-01 eliminado — ya existe FR-109-01 de Maximia que cubre investigación de incidentes.
