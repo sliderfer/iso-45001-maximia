@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SG-SST Maximia — Documentos ISO 45001</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f4f8; color: #1a202c; }
+
+  header { background: linear-gradient(135deg, #1a365d, #2b6cb0); color: white; padding: 20px 16px 16px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+  header h1 { font-size: 18px; font-weight: 700; }
+  header p { font-size: 12px; opacity: 0.85; margin-top: 4px; }
+
+  .search-bar { background: #2b6cb0; padding: 10px 16px 14px; position: sticky; top: 72px; z-index: 99; }
+  .search-bar input { width: 100%; padding: 10px 14px; border-radius: 25px; border: none; font-size: 15px; outline: none; }
+
+  main { padding: 12px; max-width: 600px; margin: 0 auto; }
+
+  .section { margin-bottom: 16px; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+  .section-header { padding: 12px 16px; font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 8px; cursor: pointer; user-select: none; }
+  .section-header .arrow { margin-left: auto; transition: transform 0.2s; }
+  .section-header.open .arrow { transform: rotate(180deg); }
+
+  .s1 .section-header { background: #ebf8ff; color: #2b6cb0; }
+  .s2 .section-header { background: #f0fff4; color: #276749; }
+  .s3 .section-header { background: #fff5f5; color: #c53030; }
+  .s4 .section-header { background: #fffbeb; color: #b7791f; }
+  .s5 .section-header { background: #faf5ff; color: #6b46c1; }
+  .s6 .section-header { background: #fff5f5; color: #c05621; }
+  .smn .section-header { background: #e2e8f0; color: #2d3748; }
+  .sfr .section-header { background: #ebf4ff; color: #3182ce; }
+  .smax .section-header { background: #fefcbf; color: #744210; }
+  .stpl .section-header { background: #e6fffa; color: #234e52; }
+
+  .doc-list { display: none; flex-direction: column; }
+  .doc-list.open { display: flex; }
+
+  .doc-btn { display: flex; align-items: center; padding: 13px 16px; border: none; background: white; text-align: left; width: 100%; cursor: pointer; border-top: 1px solid #f0f4f8; text-decoration: none; color: #1a202c; gap: 12px; transition: background 0.15s; }
+  .doc-btn:active { background: #ebf8ff; }
+  .doc-btn .icon { font-size: 20px; flex-shrink: 0; }
+  .doc-btn .name { font-size: 13px; line-height: 1.4; flex: 1; }
+  .doc-btn .code { font-size: 11px; color: #718096; font-weight: 600; }
+
+  .hidden { display: none !important; }
+
+  footer { text-align: center; padding: 20px; font-size: 11px; color: #a0aec0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📋 SG-SST Maximia</h1>
+  <p>ISO 45001:2018 — Documentos del Sistema</p>
+</header>
+
+<div class="search-bar">
+  <input type="search" id="buscador" placeholder="🔍 Buscar documento..." oninput="filtrar(this.value)">
+</div>
+
+<main>
+
+  <!-- 1. Política -->
+  <div class="section s1">
+    <div class="section-header open" onclick="toggle(this)">
+      📌 1. Política y Dirección <span class="arrow">▾</span>
+    </div>
+    <div class="doc-list open">
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/1.%20Política%20y%20Dirección/PR-01%20Política%20y%20Dirección%20SST.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-01</span><br>Política y Dirección SST</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/1.%20Política%20y%20Dirección/PR-02%20Alcance%20del%20Sistema%20SST.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-02</span><br>Alcance del Sistema SST</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/1.%20Política%20y%20Dirección/PR-03%20Contexto%20y%20Partes%20Interesadas.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-03</span><br>Contexto y Partes Interesadas</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 2. Planificación -->
+  <div class="section s2">
+    <div class="section-header open" onclick="toggle(this)">
+      🗂️ 2. Planificación <span class="arrow">▾</span>
+    </div>
+    <div class="doc-list open">
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/2.%20Planificación/PR-04%20Identificación%20de%20Peligros%20y%20Evaluación%20de%20Riesgos%20(IPER).docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-04</span><br>Identificación de Peligros y Evaluación de Riesgos (IPER)</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/2.%20Planificación/PR-05%20Requisitos%20Legales%20y%20Otros.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-05</span><br>Requisitos Legales y Otros</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/2.%20Planificación/PR-06%20Objetivos%2C%20Metas%20e%20Indicadores%20SST.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-06</span><br>Objetivos, Metas e Indicadores SST</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 3. Soporte -->
+  <div class="section s3">
+    <div class="section-header open" onclick="toggle(this)">
+      🤝 3. Soporte <span class="arrow">▾</span>
+    </div>
+    <div class="doc-list open">
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/3.%20Soporte/PR-07%20Competencias%2C%20Capacitación%20y%20Toma%20de%20Conciencia.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-07</span><br>Competencias, Capacitación y Toma de Conciencia</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/3.%20Soporte/PR-08%20Comunicación%2C%20Participación%20y%20Consulta.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-08</span><br>Comunicación, Participación y Consulta</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/3.%20Soporte/PR-09%20Control%20de%20Información%20Documentada.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-09</span><br>Control de Información Documentada</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 4. Operación -->
+  <div class="section s4">
+    <div class="section-header open" onclick="toggle(this)">
+      ⚙️ 4. Operación <span class="arrow">▾</span>
+    </div>
+    <div class="doc-list open">
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/4.%20Operación/PR-10%20Control%20Operacional%20SST.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-10</span><br>Control Operacional SST</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/4.%20Operación/PR-11%20Preparación%20y%20Respuesta%20ante%20Emergencias.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-11</span><br>Preparación y Respuesta ante Emergencias</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/4.%20Operación/PR-16%20Gestión%20del%20Cambio%20SST.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-16</span><br>Gestión del Cambio SST</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/4.%20Operación/PR-17%20Compras%2C%20Contratistas%20y%20Contratación%20Externa.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-17</span><br>Compras, Contratistas y Contratación Externa</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 5. Evaluación -->
+  <div class="section s5">
+    <div class="section-header open" onclick="toggle(this)">
+      📊 5. Evaluación del Desempeño <span class="arrow">▾</span>
+    </div>
+    <div class="doc-list open">
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/5.%20Evaluación%20del%20Desempeño/PR-12%20Seguimiento%2C%20Medición%20e%20Indicadores.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-12</span><br>Seguimiento, Medición e Indicadores</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/5.%20Evaluación%20del%20Desempeño/PR-13%20Auditoría%20Interna.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-13</span><br>Auditoría Interna</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/5.%20Evaluación%20del%20Desempeño/PR-14%20Revisión%20por%20la%20Dirección.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-14</span><br>Revisión por la Dirección</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 6. Mejora -->
+  <div class="section s6">
+    <div class="section-header open" onclick="toggle(this)">
+      🔧 6. Mejora <span class="arrow">▾</span>
+    </div>
+    <div class="doc-list open">
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/6.%20Mejora/PR-15%20No%20Conformidades%20y%20Acciones%20Correctivas.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-15</span><br>No Conformidades y Acciones Correctivas</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/6.%20Mejora/PR-18%20Investigación%20de%20Incidentes.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">PR-18</span><br>Investigación de Incidentes</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Manual -->
+  <div class="section smn">
+    <div class="section-header open" onclick="toggle(this)">
+      📘 Manual y Lista Maestra <span class="arrow">▾</span>
+    </div>
+    <div class="doc-list open">
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/MN%20Manual%20de%20Seguridad%20SST.docx" target="_blank">
+        <span class="icon">📘</span><span class="name"><span class="code">MN</span><br>Manual de Seguridad SST</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/Lista%20Maestra%20SG-SST%20Maximia.xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">LISTA</span><br>Lista Maestra SG-SST Maximia</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- FR Formularios SST -->
+  <div class="section sfr">
+    <div class="section-header" onclick="toggle(this)">
+      📝 Formularios SST (FR) <span class="arrow">▾</span>
+    </div>
+    <div class="doc-list">
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/FR%20-%20Formularios%20SST/FR-113-01%20Indicadores%20SST.xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">FR-113-01</span><br>Indicadores SST</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/FR%20-%20Formularios%20SST/FR-114-01%20Registro%20de%20No%20Conformidades.xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">FR-114-01</span><br>Registro de No Conformidades</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/FR%20-%20Formularios%20SST/FR-116-01%20Matriz%20de%20Requisitos%20Legales.xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">FR-116-01</span><br>Matriz de Requisitos Legales</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/FR%20-%20Formularios%20SST/FR-117-01%20Registro%20de%20Entrega%20de%20EPP.xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">FR-117-01</span><br>Registro de Entrega de EPP</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/FR%20-%20Formularios%20SST/FR-118-01%20Acta%20de%20Revision%20por%20la%20Direccion.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">FR-118-01</span><br>Acta de Revisión por la Dirección</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/FR%20-%20Formularios%20SST/FR-119-01%20Inventario%20de%20Sustancias%20Quimicas.xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">FR-119-01</span><br>Inventario de Sustancias Químicas</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/FR%20-%20Formularios%20SST/FR-120-01%20Registro%20de%20Ingreso%20de%20Contratistas.xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">FR-120-01</span><br>Registro de Ingreso de Contratistas</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/FR%20-%20Formularios%20SST/FR-121-01%20Registro%20de%20Simulacro%20de%20Emergencia.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">FR-121-01</span><br>Registro de Simulacro de Emergencia</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/FR%20-%20Formularios%20SST/FR-122-01%20Informe%20de%20Auditoria%20Interna%20SST.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">FR-122-01</span><br>Informe de Auditoría Interna SST</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/FR%20-%20Formularios%20SST/FR-123-01%20Formulario%20de%20Gestion%20del%20Cambio%20SST.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">FR-123-01</span><br>Formulario de Gestión del Cambio SST</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/FR%20-%20Formularios%20SST/FR-124-01%20Permiso%20de%20Trabajo%20para%20Tareas%20de%20Riesgo.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">FR-124-01</span><br>Permiso de Trabajo para Tareas de Riesgo</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/FR%20-%20Formularios%20SST/FR-125-01%20Listado%20de%20Contratistas%20Habilitados.xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">FR-125-01</span><br>Listado de Contratistas Habilitados</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Formularios Maximia -->
+  <div class="section smax">
+    <div class="section-header" onclick="toggle(this)">
+      🏢 Formularios Maximia (solo lectura) <span class="arrow">▾</span>
+    </div>
+    <div class="doc-list">
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/fr%20de%20maximia%20no%20se%20pueden%20modificar/FR%20107-01%20Control%20de%20Higiene%20y%20Seguridad%202026%20(2)%20(2).xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">FR-107-01</span><br>Control de Higiene y Seguridad 2026</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/fr%20de%20maximia%20no%20se%20pueden%20modificar/FR%20109-01%20Informe%20Técnico%20de%20Investigación%20de%20Accidentes%20e%20Incidentes%20(1)%20(3).xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">FR-109-01</span><br>Informe Técnico de Investigación de Accidentes</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/fr%20de%20maximia%20no%20se%20pueden%20modificar/FR%2025-07%20Asistencia%20a%20Capacitación.docx" target="_blank">
+        <span class="icon">📄</span><span class="name"><span class="code">FR-25-07</span><br>Asistencia a Capacitación</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/fr%20de%20maximia%20no%20se%20pueden%20modificar/FR%2027-05%20Plan%20Anual%20de%20Capacitaciones.xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">FR-27-05</span><br>Plan Anual de Capacitaciones</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/fr%20de%20maximia%20no%20se%20pueden%20modificar/FR%2085-02%20Plan%20de%20Acción.xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">FR-85-02</span><br>Plan de Acción</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/fr%20de%20maximia%20no%20se%20pueden%20modificar/FR%20-%20Estadísticas%20de%20Siniestralidad%20por%20Operación.xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">FR</span><br>Estadísticas de Siniestralidad por Operación</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/fr%20de%20maximia%20no%20se%20pueden%20modificar/AST%20Atención%20al%20público%20(6).xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">AST</span><br>Atención al Público</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/fr%20de%20maximia%20no%20se%20pueden%20modificar/AST%20MANTENIMIENTO%20(1).xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">AST</span><br>Mantenimiento</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/fr%20de%20maximia%20no%20se%20pueden%20modificar/AST%20Maximia%20%20(maestranza-mucama)%20(1).xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">AST</span><br>Maestranza / Mucama</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/fr%20de%20maximia%20no%20se%20pueden%20modificar/AST%20Maximia%20sa%20bodegueros%20(4)%20(1).xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">AST</span><br>Bodegueros</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/fr%20de%20maximia%20no%20se%20pueden%20modificar/AST%20Maximia%20sa%20gastronomia%20(7)%20(2).xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name"><span class="code">AST</span><br>Gastronomía</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Templates -->
+  <div class="section stpl">
+    <div class="section-header" onclick="toggle(this)">
+      🗒️ Templates <span class="arrow">▾</span>
+    </div>
+    <div class="doc-list">
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/template/Modelo%20PR%20(1).docx" target="_blank">
+        <span class="icon">📄</span><span class="name">Modelo Procedimiento (PR)</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/template/Modelo%20MN.docx" target="_blank">
+        <span class="icon">📄</span><span class="name">Modelo Manual (MN)</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/template/Modelo%20IT.docx" target="_blank">
+        <span class="icon">📄</span><span class="name">Modelo Instrucción de Trabajo (IT)</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/template/Modelo%20FR%20WORD%20(1).docx" target="_blank">
+        <span class="icon">📄</span><span class="name">Modelo Formulario Word (FR)</span>
+      </a>
+      <a class="doc-btn" href="https://github.com/sliderfer/iso-45001-maximia/raw/main/template/Modelo%20FR%20EXCEL.doc%20(1).xlsx" target="_blank">
+        <span class="icon">📊</span><span class="name">Modelo Formulario Excel (FR)</span>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<footer>SG-SST Maximia · Fernando Vidal (FERZEP RAMALLO) · ISO 45001:2018</footer>
+
+<script>
+function toggle(header) {
+  header.classList.toggle('open');
+  const list = header.nextElementSibling;
+  list.classList.toggle('open');
+}
+
+function filtrar(q) {
+  q = q.toLowerCase().trim();
+  document.querySelectorAll('.doc-btn').forEach(btn => {
+    const texto = btn.textContent.toLowerCase();
+    btn.classList.toggle('hidden', q && !texto.includes(q));
+  });
+  if (q) {
+    document.querySelectorAll('.doc-list').forEach(l => l.classList.add('open'));
+    document.querySelectorAll('.section-header').forEach(h => h.classList.add('open'));
+  }
+}
+</script>
+</body>
+</html>
