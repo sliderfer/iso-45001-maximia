@@ -140,18 +140,59 @@ El manual define el sistema. Los procedimientos describen cómo. Los formularios
 
 ---
 
+## Templates del Sistema
+
+La carpeta `template/` contiene los modelos base para todos los tipos de documento del sistema. **Siempre usar estos templates al crear documentos nuevos.**
+
+| Archivo | Uso |
+|---------|-----|
+| `Modelo PR (1).docx` | Template para Procedimientos (PR-XX) |
+| `Modelo MN.docx` | Template para el Manual (MN) |
+| `Modelo IT.docx` | Template para Instrucciones de Trabajo (IT) |
+| `Modelo FR WORD (1).docx` | Template para Formularios en Word (FR) |
+| `Modelo FR EXCEL.doc (1).xlsx` | Template para Formularios en Excel (FR) |
+
+### Estructura obligatoria de un PR (según template)
+
+Todo procedimiento debe tener las siguientes secciones **en este orden**:
+
+1. **OBJETIVO:** — qué se busca con el procedimiento
+2. **ALCANCE:** — a quién y qué aplica
+3. **DESARROLLO:** — el contenido del procedimiento (numerado 3. en adelante)
+4. **REGISTROS Y ARCHIVO** — tabla con: Código, Título, Soporte, Archivo, Retención, Disposición Final
+5. **LISTA DE DISTRIBUCIÓN**
+6. **REVISIONES** — tabla con: N° de Revisión, Fecha, Descripción del Cambio, Origen
+7. **CONTROL Y APROBACIÓN** — tabla con: REALIZÓ / CONTROLÓ / APROBÓ
+
+### Encabezado de PR (header)
+- Logo de Maximia (izquierda)
+- "PROCEDIMIENTO" (centro)
+- Código PR + Vigencia (derecha)
+
+### Pie de página de PR (footer)
+- Izquierda: "El presente Documento es de uso interno de MAXIMIA S.A." + "Cualquier copia impresa o fuera del Repositorio del SGC de MAXIMIA se considera NO CONTROLADA"
+- Derecha: número de página
+
+### Nota técnica sobre archivos del sistema
+Algunos archivos `.docx` del sistema usan una variante de ZIP no estándar (con entradas `[trash]`). Python `zipfile` no puede abrirlos, pero Word los abre sin problema. Para leerlos programáticamente, usar lectura manual de ZIP con `struct` + `zlib`.
+
+---
+
 ## Memorias de Trabajo
 
 > Esta sección se actualiza a medida que trabajamos. Aquí guardamos aprendizajes, aclaraciones y decisiones tomadas durante el proyecto.
 
 ### Decisiones tomadas
-- (vacío — se irá completando)
+- PR-15 fue corregido el 12/05/2026: le faltaban las secciones OBJETIVO, ALCANCE y DESARROLLO al inicio. Se agregaron con contenido acorde al procedimiento.
 
 ### Aclaraciones del cliente
 - (vacío — se irá completando)
 
 ### Formas de trabajo aprendidas
-- (vacío — se irá completando)
+- Todos los PR deben tener OBJETIVO, ALCANCE, DESARROLLO, REGISTROS Y ARCHIVO, LISTA DE DISTRIBUCIÓN, REVISIONES, CONTROL Y APROBACIÓN — en ese orden.
+- El nombre del PR-04 tiene "(2)" de más. Pendiente renombrar cuando corresponda.
+- La carpeta `fr de maximia no se pueden modificar/` existe pero está vacía — los formularios propios aún no fueron cargados.
+- Los templates viven en `template/` — usar siempre como punto de partida.
 
 ### Aspectos específicos de Maximia
 - El sistema está siendo construido desde cero / en proceso de implementación.
